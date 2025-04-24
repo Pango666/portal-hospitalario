@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaludNacional Plus - Portal Hospitalario</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <h1>SaludNacional <span>Plus</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#doctores">Doctores</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#login" class="login-btn">Ingresar al Sistema</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="slide active" style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('img/1.jpg');">
+                <div class="container">
+                    <div class="hero-content">
+                        <h2>Cuidando tu salud <br>con <span>excelencia</span></h2>
+                        <p>Somos el centro médico líder en atención integral y tecnología de vanguardia.</p>
+                        <div class="hero-buttons">
+                            <a href="#contacto" class="btn btn-primary">Agendar Cita</a>
+                            <a href="#servicios" class="btn btn-secondary">Nuestros Servicios</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('img/2.jpg');">
+                <div class="container">
+                    <div class="hero-content">
+                        <h2>Equipo médico <br>de <span>alto nivel</span></h2>
+                        <p>Profesionales especializados comprometidos con tu bienestar.</p>
+                        <div class="hero-buttons">
+                            <a href="#doctores" class="btn btn-primary">Conoce nuestros doctores</a>
+                            <a href="#servicios" class="btn btn-secondary">Ver especialidades</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide" style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('img/3.webp');">
+                <div class="container">
+                    <div class="hero-content">
+                        <h2>Tecnología <br>de <span>vanguardia</span></h2>
+                        <p>Equipos médicos de última generación para diagnósticos precisos.</p>
+                        <div class="hero-buttons">
+                            <a href="#servicios" class="btn btn-primary">Nuestros equipos</a>
+                            <a href="#contacto" class="btn btn-secondary">Solicitar información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Controles del carrusel -->
+        <div class="slider-controls">
+            <div class="dots-container"></div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre <span>Nosotros</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>SaludNacional Plus</h3>
+                    <p>Fundado en 1995, SaludNacional Plus ha crecido para convertirse en uno de los hospitales más reconocidos del país, ofreciendo atención médica de calidad con un enfoque humano y profesional.</p>
+                    <p>Nuestra misión es proporcionar atención médica integral, accesible y de alta calidad a todos nuestros pacientes, utilizando tecnología de punta y un equipo médico altamente calificado.</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check-circle"></i> Más de 25 años de experiencia</li>
+                        <li><i class="fas fa-check-circle"></i> Tecnología médica de vanguardia</li>
+                        <li><i class="fas fa-check-circle"></i> Equipo multidisciplinario</li>
+                        <li><i class="fas fa-check-circle"></i> Atención personalizada</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="img/hospital.png" alt="Edificio del hospital">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros <span>Servicios</span></h2>
+            <p class="section-subtitle">Ofrecemos una amplia gama de servicios médicos para cubrir todas tus necesidades de salud.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h3>Hospitalización</h3>
+                    <p>Áreas de hospitalización con todas las comodidades y atención médica las 24 horas.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Consultas Externas</h3>
+                    <p>Consultas con especialistas en todas las áreas médicas con citas programadas.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Urgencias</h3>
+                    <p>Atención de urgencias 24/7 con equipo médico especializado y tecnología avanzada.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Laboratorio Clínico</h3>
+                    <p>Análisis clínicos con resultados precisos y en el menor tiempo posible.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-x-ray"></i>
+                    </div>
+                    <h3>Imagenología</h3>
+                    <p>Rayos X, ultrasonidos, tomografías y resonancias magnéticas de alta calidad.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Cardiología</h3>
+                    <p>Evaluación, diagnóstico y tratamiento de enfermedades cardiovasculares.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctores" class="doctors">
+        <div class="container">
+            <h2 class="section-title">Nuestros <span>Especialistas</span></h2>
+            <p class="section-subtitle">Conoce a nuestro equipo de profesionales altamente calificados.</p>
+            
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="img/doc1.png" alt="Doctor Juan Pérez">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Juan Pérez</h3>
+                        <p class="specialty">Cardiólogo</p>
+                        <p class="bio">Especialista en enfermedades cardiovasculares con más de 15 años de experiencia.</p>
+                        <div class="doctor-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="img/doc2.png" alt="Doctora María Gómez">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dra. María Gómez</h3>
+                        <p class="specialty">Pediatra</p>
+                        <p class="bio">Especialista en cuidado infantil y desarrollo pediátrico con enfoque preventivo.</p>
+                        <div class="doctor-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="img/doc3.jpg" alt="Doctor Carlos Rodríguez">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Carlos Rodríguez</h3>
+                        <p class="specialty">Traumatólogo</p>
+                        <p class="bio">Experto en cirugía ortopédica y tratamiento de lesiones musculoesqueléticas.</p>
+                        <div class="doctor-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="img/doc4.webp" alt="Doctora Laura Martínez">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dra. Laura Martínez</h3>
+                        <p class="specialty">Ginecóloga</p>
+                        <p class="bio">Especialista en salud femenina con enfoque en medicina preventiva y reproductiva.</p>
+                        <div class="doctor-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contáct<span>anos</span></h2>
+            <p class="section-subtitle">Estamos aquí para responder tus preguntas y atender tus necesidades.</p>            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Av. Principal #1234, Ciudad Capital</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Teléfonos</h3>
+                            <p>Emergencias: (123) 456-7890</p>
+                            <p>Citas: (123) 456-7891</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Correo Electrónico</h3>
+                            <p>info@saludnacionalplus.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horario de Atención</h3>
+                            <p>Lunes a Viernes: 7:00 am - 7:00 pm</p>
+                            <p>Sábados: 8:00 am - 2:00 pm</p>
+                            <p>Emergencias: 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" required>
+                                <option value="">Seleccione un asunto</option>
+                                <option value="cita">Agendar cita</option>
+                                <option value="informacion">Solicitar información</option>
+                                <option value="queja">Queja o sugerencia</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+            <div class="map-container">
+                <h3>Nuestra Ubicación en La Paz</h3>
+                <div id="hospital-map" class="hospital-map"></div>
+                <p class="map-instructions">Nos encontramos en la ciudad de La Paz, Bolivia. Accesible por múltiples vías de transporte público.</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="login" class="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Ingreso al Sistema</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox"> Recordar usuario
+                    </label>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+            </form>
+            <div class="login-footer">
+                <p>¿No tienes una cuenta? <a href="#">Regístrate aquí</a></p>
+                <div class="login-social">
+                    <p>O ingresa con:</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-microsoft"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>SaludNacional <span>Plus</span></h3>
+                    </div>
+                    <p>Comprometidos con tu salud y bienestar, ofreciendo atención médica de calidad con calidez humana.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#doctores">Doctores</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#login">Ingresar al Sistema</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Nuestros Servicios</h3>
+                    <ul>
+                        <li><a href="#">Hospitalización</a></li>
+                        <li><a href="#">Consultas Externas</a></li>
+                        <li><a href="#">Urgencias</a></li>
+                        <li><a href="#">Laboratorio Clínico</a></li>
+                        <li><a href="#">Imagenología</a></li>
+                        <li><a href="#">Cardiología</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Boletín Informativo</h3>
+                    <p>Suscríbete para recibir noticias y promociones de salud.</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 SaludNacional Plus. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
